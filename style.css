@@ -203,18 +203,35 @@ select option { background: #0e1117; }
 .btn-primary {
   width: 100%;
   padding: 16px;
-  border-radius: 10px;
-  background: linear-gradient(135deg, #6c6ef5, #8b5cf6);
+  border-radius: 12px;
+  background: linear-gradient(90deg, #7b61ff 0%, #5ad0ff 50%, #7b61ff 100%);
   border: none;
-  color: #fff;
+  color: #071018;
   font-size: 16px;
-  font-weight: 700;
-  letter-spacing: 1px;
-  box-shadow: 0 4px 32px var(--accent-glow);
-  transition: opacity 0.15s, transform 0.1s;
+  font-weight: 800;
+  letter-spacing: 0.6px;
+  box-shadow: 0 8px 30px rgba(91, 72, 255, 0.18), 0 4px 12px rgba(90,208,255,0.08);
+  transition: transform 220ms cubic-bezier(.2,.9,.2,1), box-shadow 220ms;
+  position: relative;
+  overflow: hidden;
 }
-.btn-primary:hover { opacity: 0.92; transform: translateY(-1px); }
-.btn-primary:active { transform: translateY(0); }
+.btn-primary:hover { transform: translateY(-4px); box-shadow: 0 16px 40px rgba(91,72,255,0.22); }
+.btn-primary:active { transform: translateY(-1px); }
+.btn-primary::after {
+  content: "";
+  position: absolute;
+  left: -40%;
+  top: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255,255,255,0.18), rgba(255,255,255,0.06), rgba(255,255,255,0));
+  transform: skewX(-18deg) translateX(-10%);
+  transition: transform 900ms;
+}
+.btn-primary:hover::after { transform: skewX(-18deg) translateX(110%); }
+
+.logo-text { animation: bobbing 3s ease-in-out infinite; }
+.landing-glow { filter: blur(14px); opacity: 0.95; }
 
 /* ─── LANG BUTTONS ──────────────────────────────────────────────────────────── */
 .lang-btn {
@@ -388,6 +405,17 @@ select option { background: #0e1117; }
   text-transform: uppercase;
 }
 .quest-banner-desc { color: var(--muted); }
+
+.quest-keys-counter {
+  margin: 12px 0 18px 0;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.04);
+  border-radius: 12px;
+  display: inline-block;
+  font-weight: 700;
+  color: var(--muted);
+}
 
 /* ─── ISLAND MAP ─────────────────────────────────────────────────────────── */
 .map-header { margin-bottom: 32px; }

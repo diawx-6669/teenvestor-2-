@@ -32,25 +32,25 @@ const T = {
     backToMap: "Вернуться к карте",
     bonusCoins: "бонус монет",
     nextTask: "Следующая задача →",
-    allDone: "Все задачи выполнены! 🏆",
+    allDone: "Все задачи выполнены!",
     // Quest / Detective
-    detectiveQuest: "🕵️ Детектив-квест",
+    detectiveQuest: "Детектив-квест",
     questMapTitle: "Карта квестов",
     mainQuest: "Главный квест",
-    goldenKey: "🗝️ Золотой Ключ",
+    goldenKey: "Золотой Ключ",
     goldenKeyDesc: "Выполни 3 миссии, чтобы получить Золотой Ключ и огромный бонус!",
     mission: "Миссия",
     missionComplete: "Миссия выполнена!",
     goldenKeyUnlocked: "ЗОЛОТОЙ КЛЮЧ ПОЛУЧЕН!",
     goldenKeyBonus: "+500 монет + легендарный скин",
-    easterEgg: "🥚 Пасхалка найдена!",
+    easterEgg: "Пасхалка найдена!",
     easterEggBonus: "+50 монет бонус!",
     hiddenCode: "Введи секретный шифр",
     hiddenCodePlaceholder: "Шифр...",
     checkCode: "Проверить",
-    codeCorrect: "✅ Шифр верный! Бонус получен!",
-    codeWrong: "❌ Неверный шифр",
-    timeChallenge: "⏱️ Тайм-Челлендж",
+    codeCorrect: "Шифр верный! Бонус получен!",
+    codeWrong: "Неверный шифр",
+    timeChallenge: "Тайм-Челлендж",
     timeChallengeDesc: "Квест открыт 24 часа! Найди Ключ первым.",
     timeChallengeActive: "АКТИВЕН",
     timeLeft: "Осталось",
@@ -83,7 +83,7 @@ const T = {
     inventoryDesc: "Предметы из кейсов сохраняются здесь",
     emptyInventory: "Инвентарь пуст. Открой кейс!",
     // Team
-    teamChallenge: "👥 Командный Челлендж",
+    teamChallenge: "Командный Челлендж",
     teamGoal: "Цель: 5000 монет за неделю",
     teamProgress: "Прогресс команды",
     teamBonus: "Сундук открыт! +200 монет каждому",
@@ -120,24 +120,24 @@ const T = {
     backToMap: "Картаға оралу",
     bonusCoins: "бонус монета",
     nextTask: "Келесі тапсырма →",
-    allDone: "Барлық тапсырма орындалды! 🏆",
-    detectiveQuest: "🕵️ Детектив-квест",
+    allDone: "Барлық тапсырма орындалды!",
+    detectiveQuest: "Детектив-квест",
     questMapTitle: "Квест картасы",
     mainQuest: "Басты квест",
-    goldenKey: "🗝️ Алтын Кілт",
+    goldenKey: "Алтын Кілт",
     goldenKeyDesc: "Алтын Кілт алу үшін 3 миссияны орында!",
     mission: "Миссия",
     missionComplete: "Миссия орындалды!",
     goldenKeyUnlocked: "АЛТЫН КІЛТ АЛЫНДЫ!",
     goldenKeyBonus: "+500 монета + аңыздық скин",
-    easterEgg: "🥚 Жасырын тапқансыз!",
+    easterEgg: "Жасырын табылды!",
     easterEggBonus: "+50 монета бонус!",
     hiddenCode: "Жасырын шифрді енгізіңіз",
     hiddenCodePlaceholder: "Шифр...",
     checkCode: "Тексеру",
-    codeCorrect: "✅ Шифр дұрыс! Бонус алынды!",
-    codeWrong: "❌ Қате шифр",
-    timeChallenge: "⏱️ Уақыт Челлендж",
+    codeCorrect: "Шифр дұрыс! Бонус алынды!",
+    codeWrong: "Қате шифр",
+    timeChallenge: "Уақыт Челлендж",
     timeChallengeDesc: "Квест 24 сағат ашық! Кілтті бірінші тап.",
     timeChallengeActive: "БЕЛСЕНДІ",
     timeLeft: "Қалды",
@@ -166,7 +166,7 @@ const T = {
     inventory: "Инвентарь",
     inventoryDesc: "Кейстерден алынған заттар",
     emptyInventory: "Инвентарь бос. Кейс ашыңыз!",
-    teamChallenge: "👥 Команда Челлендж",
+    teamChallenge: "Команда Челлендж",
     teamGoal: "Мақсат: Аптада 5000 монета",
     teamProgress: "Команда прогресі",
     teamBonus: "Сандық ашылды! +200 монета әркімге",
@@ -203,24 +203,24 @@ const T = {
     backToMap: "Back to Map",
     bonusCoins: "bonus coins",
     nextTask: "Next Task →",
-    allDone: "All tasks done! 🏆",
-    detectiveQuest: "🕵️ Detective Quest",
+    allDone: "All tasks done!",
+    detectiveQuest: "Detective Quest",
     questMapTitle: "Quest Map",
     mainQuest: "Main Quest",
-    goldenKey: "🗝️ Golden Key",
+    goldenKey: "Golden Key",
     goldenKeyDesc: "Complete 3 missions to earn the Golden Key and a huge bonus!",
     mission: "Mission",
     missionComplete: "Mission Complete!",
     goldenKeyUnlocked: "GOLDEN KEY UNLOCKED!",
     goldenKeyBonus: "+500 coins + legendary skin",
-    easterEgg: "🥚 Easter Egg Found!",
+    easterEgg: "Easter Egg Found!",
     easterEggBonus: "+50 coins bonus!",
     hiddenCode: "Enter the secret cipher",
     hiddenCodePlaceholder: "Cipher...",
     checkCode: "Check",
-    codeCorrect: "✅ Correct! Bonus received!",
-    codeWrong: "❌ Wrong cipher",
-    timeChallenge: "⏱️ Time Challenge",
+    codeCorrect: "Correct! Bonus received!",
+    codeWrong: "Wrong cipher",
+    timeChallenge: "Time Challenge",
     timeChallengeDesc: "Quest is open for 24 hours! Find the Key first.",
     timeChallengeActive: "ACTIVE",
     timeLeft: "Left",
@@ -249,7 +249,7 @@ const T = {
     inventory: "Inventory",
     inventoryDesc: "Items from cases are stored here",
     emptyInventory: "Inventory empty. Open a case!",
-    teamChallenge: "👥 Team Challenge",
+    teamChallenge: "Team Challenge",
     teamGoal: "Goal: 5000 coins in a week",
     teamProgress: "Team Progress",
     teamBonus: "Chest unlocked! +200 coins each",
@@ -290,9 +290,9 @@ const EASTER_CODES = {
 
 // ─── QUEST MISSIONS ──────────────────────────────────────────────────────────
 const MISSIONS = [
-  { id: 1, icon: "🔢", title: { ru: "Мастер Чисел", kz: "Сан Шебері", en: "Number Master" }, desc: { ru: "Реши 3 задачи за одну сессию", kz: "Бір сессияда 3 тапсырма шеш", en: "Solve 3 tasks in one session" }, requirement: "solve3", reward: 80 },
-  { id: 2, icon: "💡", title: { ru: "Без Подсказок", kz: "Кеңессіз", en: "No Hints" }, desc: { ru: "Реши задачу без использования подсказки", kz: "Кеңессіз тапсырма шеш", en: "Solve a task without using a hint" }, requirement: "noHint", reward: 60 },
-  { id: 3, icon: "🔥", title: { ru: "Серия x5", kz: "x5 Серия", en: "Streak x5" }, desc: { ru: "Набери серию из 5 правильных ответов", kz: "5 дұрыс жауап серияны жина", en: "Get a streak of 5 correct answers" }, requirement: "streak5", reward: 120 },
+  { id: 1, icon: "", title: { ru: "Мастер Чисел", kz: "Сан Шебері", en: "Number Master" }, desc: { ru: "Реши 3 задачи за одну сессию", kz: "Бір сессияда 3 тапсырма шеш", en: "Solve 3 tasks in one session" }, requirement: "solve3", reward: 80 },
+  { id: 2, icon: "", title: { ru: "Без Подсказок", kz: "Кеңессіз", en: "No Hints" }, desc: { ru: "Реши задачу без использования подсказки", kz: "Кеңессіз тапсырма шеш", en: "Solve a task without using a hint" }, requirement: "noHint", reward: 60 },
+  { id: 3, icon: "", title: { ru: "Серия x5", kz: "x5 Серия", en: "Streak x5" }, desc: { ru: "Набери серию из 5 правильных ответов", kz: "5 дұрыс жауап серияны жина", en: "Get a streak of 5 correct answers" }, requirement: "streak5", reward: 120 },
 ];
 
 // ─── RARITY ──────────────────────────────────────────────────────────────────
@@ -306,7 +306,7 @@ const CASES = [
   {
     id: "bronze", name: { ru: "Бронзовый кейс", kz: "Қола кейс", en: "Bronze Case" },
     cost: 50, color: "#cd7f32", tier: "BRONZE",
-    // 🥚 ПАСХАЛКА: Код WOLF777 спрятан в этом кейсе. Внимательный читатель найдёт его!
+    // ПАСХАЛКА: Код WOLF777 спрятан в этом кейсе. Внимательный читатель найдёт его!
     rewards: [
       { name:{ru:"50 XP Буст",kz:"50 XP Буст",en:"50 XP Boost"}, chance:40, type:"xp", value:50, rarity:"common", desc:{ru:"+50 XP к твоему счёту",kz:"+50 XP есебіңе",en:"+50 XP to your account"} },
       { name:{ru:"30 TV Монет",kz:"30 TV Монета",en:"30 TV Coins"}, chance:30, type:"coins", value:30, rarity:"uncommon", desc:{ru:"+30 монет на кошелёк",kz:"+30 монета әмияныңа",en:"+30 coins to wallet"} },
@@ -361,11 +361,11 @@ const MOCK_PLAYERS = [
 
 // ─── RPG TITLES ──────────────────────────────────────────────────────────────
 function getTitle(xpVal) {
-  if (xpVal >= 2000) return { key: "titleLegend", color: "#f43f5e", icon: "👑" };
-  if (xpVal >= 1000) return { key: "titleMagnate", color: "#f5a623", icon: "💰" };
-  if (xpVal >= 500)  return { key: "titleWolf",    color: "#b06de3", icon: "🐺" };
-  if (xpVal >= 200)  return { key: "titleAssistant",color: "#4c9eff", icon: "📊" };
-  return { key: "titleNovice", color: "#8b9cb5", icon: "🌱" };
+  if (xpVal >= 2000) return { key: "titleLegend", color: "#f43f5e", icon: "" };
+  if (xpVal >= 1000) return { key: "titleMagnate", color: "#f5a623", icon: "" };
+  if (xpVal >= 500)  return { key: "titleWolf",    color: "#b06de3", icon: "" };
+  if (xpVal >= 200)  return { key: "titleAssistant",color: "#4c9eff", icon: "" };
+  return { key: "titleNovice", color: "#8b9cb5", icon: "" };
 }
 
 // ─── STATE ────────────────────────────────────────────────────────────────────
@@ -391,14 +391,37 @@ let lbFilter = "xp";
 let reviewStars = 5;
 let reviews = [
   { name: "Arman", text: "Отличная платформа! Решаю каждый день. Кстати, нашёл шифр STEPPE в одном из кейсов!", stars: 5, grade: 9 },
-  { name: "Aisha", text: "Кейсы — огонь! Хочу больше наград. P.S. ищите пасхалки в описаниях кейсов 🥚", stars: 5, grade: 10 },
-  { name: "Berik", text: "Система кейсов мотивирует решать больше задач! Код HIDDEN42 — секрет для своих 😉", stars: 5, grade: 9 },
+  { name: "Aisha", text: "Кейсы — отлично! Хочу больше наград. P.S. ищите пасхалки в описаниях кейсов", stars: 5, grade: 10 },
+  { name: "Berik", text: "Система кейсов мотивирует решать больше задач! Код HIDDEN42 — секрет для своих", stars: 5, grade: 9 },
 ];
 let activeCaseObj = null;
 let selectedIslandId = null;
 let questPopupTimer = null;
 let audioCtx = null;
 
+// Quest starter state
+let questStarted = false;
+let keysFound = 0;
+const KEYS_REQUIRED = 3;
+
+function sanitizeText(str) {
+  try { return String(str).replace(/[\u{1F300}-\u{1F6FF}\u{2600}-\u{26FF}\u{2700}-\u{27BF}\u{1F900}-\u{1F9FF}]/gu, '').trim(); }
+  catch(e) { return String(str); }
+}
+
+function setQuestStarted(v) {
+  questStarted = !!v;
+  if (questStarted) { keysFound = 0; }
+  renderTasks();
+}
+
+function startAndScroll() {
+  // run startGame and only proceed if it succeeded
+  const started = startGame();
+  if (!started) return;
+  setQuestStarted(true);
+  setTimeout(() => { document.getElementById('main-app')?.scrollIntoView({ behavior: 'smooth' }); }, 80);
+}
 // Quest / Mission state
 let completedMissions = {};
 let sessionSolvedCount = 0;
@@ -555,25 +578,29 @@ function buildDetectiveQuestPanel() {
   const timeLeft = Math.max(0, 86400000 - (Date.now() - timeChallengeStart));
   const mCount = MISSIONS.filter(m => completedMissions[m.id]).length;
 
+  const detectiveTitle = sanitizeText(t.detectiveQuest);
+  const easterLabel = sanitizeText(t.hiddenCode);
   return `
     <div class="detective-panel">
       <div class="detective-header">
-        <div class="detective-title">${t.detectiveQuest}</div>
+        <div class="detective-title">${detectiveTitle}</div>
         <div class="time-chip ${timeLeft > 0 ? 'active' : ''}">
-          ⏱ ${timeLeft > 0 ? formatTime(timeLeft) : "—"}
+          ${timeLeft > 0 ? formatTime(timeLeft) : "—"}
         </div>
       </div>
 
+      ${questStarted ? `<div class="quest-keys-counter" id="quest-keys-counter">Ключи: ${keysFound} / ${KEYS_REQUIRED}</div>` : ``}
+
       <!-- Golden Key progress -->
       <div class="golden-key-card ${goldenKeyEarned ? 'earned' : ''}">
-        <div class="gk-icon">${goldenKeyEarned ? "🗝️" : "🔒"}</div>
+        <div class="gk-icon">${goldenKeyEarned ? "" : ""}</div>
         <div class="gk-body">
-          <div class="gk-title">${t.goldenKey}</div>
-          <div class="gk-desc">${goldenKeyEarned ? t.goldenKeyBonus : t.goldenKeyDesc}</div>
+          <div class="gk-title">${sanitizeText(t.goldenKey)}</div>
+          <div class="gk-desc">${sanitizeText(goldenKeyEarned ? t.goldenKeyBonus : t.goldenKeyDesc)}</div>
           <div class="gk-progress-bar">
             <div class="gk-progress-fill" style="width:${(mCount/MISSIONS.length)*100}%"></div>
           </div>
-          <div class="gk-progress-label">${mCount}/${MISSIONS.length} ${t.mission}</div>
+          <div class="gk-progress-label">${mCount}/${MISSIONS.length} ${sanitizeText(t.mission)}</div>
         </div>
       </div>
 
@@ -583,10 +610,10 @@ function buildDetectiveQuestPanel() {
           const done = completedMissions[m.id];
           return `
             <div class="mission-card ${done ? 'done' : ''}">
-              <div class="mission-icon">${done ? "✅" : m.icon}</div>
+              <div class="mission-icon">${done ? "OK" : ""}</div>
               <div class="mission-body">
-                <div class="mission-title">${m.title[lang]}</div>
-                <div class="mission-desc">${m.desc[lang]}</div>
+                <div class="mission-title">${sanitizeText(m.title[lang])}</div>
+                <div class="mission-desc">${sanitizeText(m.desc[lang])}</div>
                 <div class="mission-reward">+${m.reward} TV</div>
               </div>
             </div>
@@ -596,7 +623,7 @@ function buildDetectiveQuestPanel() {
 
       <!-- Easter egg -->
       <div class="easter-section">
-        <div class="easter-label">🥚 ${t.hiddenCode}</div>
+        <div class="easter-label">${easterLabel}</div>
         <div class="easter-row">
           <input id="easter-input" class="easter-input" placeholder="${t.hiddenCodePlaceholder}" autocomplete="off" />
           <button id="easter-btn" class="easter-btn">${t.checkCode}</button>
@@ -606,14 +633,14 @@ function buildDetectiveQuestPanel() {
 
       <!-- Team challenge -->
       <div class="team-card">
-        <div class="team-title">${t.teamChallenge}</div>
-        <div class="team-goal">${t.teamGoal}</div>
+        <div class="team-title">${sanitizeText(t.teamChallenge)}</div>
+        <div class="team-goal">${sanitizeText(t.teamGoal)}</div>
         <div class="team-bar-wrap">
           <div class="team-bar-fill" style="width:${Math.min((teamCoins/TEAM_GOAL)*100,100)}%"></div>
         </div>
         <div class="team-stats">
           <span class="team-coins">${teamCoins.toLocaleString()} / ${TEAM_GOAL.toLocaleString()} TV</span>
-          ${teamCoins >= TEAM_GOAL ? `<span class="team-bonus">🎁 ${t.teamBonus}</span>` : ""}
+          ${teamCoins >= TEAM_GOAL ? `<span class="team-bonus">${sanitizeText(t.teamBonus)}</span>` : ""}
         </div>
       </div>
     </div>
@@ -648,7 +675,7 @@ function checkEasterCode() {
     msgEl.className = "easter-msg success visible";
     renderTopBar();
     renderXpBar();
-    showQuestPopup(0, reward.coins, "🥚 " + t.easterEgg);
+    showQuestPopup(0, reward.coins, sanitizeText(t.easterEgg));
   }
   easterStatusTimer = setTimeout(() => { msgEl.className = "easter-msg"; }, 3500);
 }
@@ -878,24 +905,27 @@ function checkMissions(currentStreak) {
   if (!completedMissions[1] && sessionSolvedCount >= 3) {
     completedMissions[1] = true;
     coins += MISSIONS[0].reward;
+    keysFound = Math.min(KEYS_REQUIRED, keysFound + 1);
     anyNew = true;
-    setTimeout(() => showQuestPopup(0, MISSIONS[0].reward, "🔢 " + MISSIONS[0].title[lang]), 500);
+    setTimeout(() => showQuestPopup(0, MISSIONS[0].reward, sanitizeText(MISSIONS[0].title[lang])), 500);
   }
 
   // Mission 2: solve without hint
   if (!completedMissions[2] && sessionNoHintSolved) {
     completedMissions[2] = true;
     coins += MISSIONS[1].reward;
+    keysFound = Math.min(KEYS_REQUIRED, keysFound + 1);
     anyNew = true;
-    setTimeout(() => showQuestPopup(0, MISSIONS[1].reward, "💡 " + MISSIONS[1].title[lang]), 800);
+    setTimeout(() => showQuestPopup(0, MISSIONS[1].reward, sanitizeText(MISSIONS[1].title[lang])), 800);
   }
 
   // Mission 3: streak 5
   if (!completedMissions[3] && currentStreak >= 5) {
     completedMissions[3] = true;
     coins += MISSIONS[2].reward;
+    keysFound = Math.min(KEYS_REQUIRED, keysFound + 1);
     anyNew = true;
-    setTimeout(() => showQuestPopup(0, MISSIONS[2].reward, "🔥 " + MISSIONS[2].title[lang]), 1100);
+    setTimeout(() => showQuestPopup(0, MISSIONS[2].reward, sanitizeText(MISSIONS[2].title[lang])), 1100);
   }
 
   // Golden key
@@ -904,10 +934,13 @@ function checkMissions(currentStreak) {
     coins += 500;
     xp += 200;
     earnedRewards.push({ name: { ru: "Золотой Ключ", kz: "Алтын Кілт", en: "Golden Key" }, rarity: "legendary", type: "badge", value: "goldenkey" });
-    setTimeout(() => showQuestPopup(0, 500, "🗝️ " + t.goldenKeyUnlocked), 1500);
+    keysFound = KEYS_REQUIRED;
+    setTimeout(() => showQuestPopup(0, 500, sanitizeText(t.goldenKeyUnlocked)), 1500);
   }
 
   if (anyNew) { renderTopBar(); renderXpBar(); }
+  // update tasks panel to reflect new quest/keys state
+  renderTasks();
 }
 
 function useHint(taskId) {
@@ -1217,11 +1250,11 @@ function renderProfile() {
 
   // Title progression
   const titles = [
-    { key: "titleNovice", xpNeeded: 0, icon: "🌱", color: "#8b9cb5" },
-    { key: "titleAssistant", xpNeeded: 200, icon: "📊", color: "#4c9eff" },
-    { key: "titleWolf", xpNeeded: 500, icon: "🐺", color: "#b06de3" },
-    { key: "titleMagnate", xpNeeded: 1000, icon: "💰", color: "#f5a623" },
-    { key: "titleLegend", xpNeeded: 2000, icon: "👑", color: "#f43f5e" },
+    { key: "titleNovice", xpNeeded: 0, icon: "", color: "#8b9cb5" },
+    { key: "titleAssistant", xpNeeded: 200, icon: "", color: "#4c9eff" },
+    { key: "titleWolf", xpNeeded: 500, icon: "", color: "#b06de3" },
+    { key: "titleMagnate", xpNeeded: 1000, icon: "", color: "#f5a623" },
+    { key: "titleLegend", xpNeeded: 2000, icon: "", color: "#f43f5e" },
   ];
 
   const statsData = [
@@ -1323,7 +1356,7 @@ function renderBank() {
             <div class="interest-bar" style="width:${Math.min((interestEarned/Math.max(depositAmount,1))*1000,100)}%"></div>
           </div>
           <div class="compound-explanation">
-            💡 Каждую секунду твои деньги растут! За год на ${depositAmount} TV ты получишь ~${Math.round(depositAmount * 0.1)} TV процентов.
+            Каждую секунду твои деньги растут! За год на ${depositAmount} TV ты получишь ~${Math.round(depositAmount * 0.1)} TV процентов.
           </div>
           <button class="bank-withdraw-btn" id="bank-withdraw-btn">${t.withdrawBtn} (${totalWithInterest} TV)</button>
         </div>
@@ -1346,13 +1379,13 @@ function renderBank() {
     </div>
 
     <!-- How interest works -->
-    <div class="bank-edu-card">
-      <div class="bank-edu-title">📚 Как работают сложные проценты?</div>
-      <div class="bank-edu-text">
-        Представь: ты кладёшь <strong>100 TV</strong> под 10% годовых.<br/>
-        Через год: 110 TV. Через 2 года: 121 TV. Через 10 лет: <strong>259 TV!</strong><br/>
-        Деньги работают <em>на тебя</em> — это и есть магия сложных процентов 🚀
-      </div>
+      <div class="bank-edu-card">
+        <div class="bank-edu-title">Как работают сложные проценты?</div>
+        <div class="bank-edu-text">
+          Представь: ты кладёшь <strong>100 TV</strong> под 10% годовых.<br/>
+          Через год: 110 TV. Через 2 года: 121 TV. Через 10 лет: <strong>259 TV!</strong><br/>
+          Деньги работают на тебя — это и есть сила сложных процентов
+        </div>
       <div class="compound-table">
         ${[1,2,5,10].map(yr => {
           const val = Math.round(100 * Math.pow(1.1, yr));
@@ -1475,7 +1508,7 @@ function startGame() {
     gradeSelect.classList.toggle("error", !gradeVal);
     errMsg.textContent = t.nameError;
     errMsg.classList.add("visible");
-    return;
+    return false;
   }
   nameInput.classList.remove("error");
   gradeSelect.classList.remove("error");
@@ -1487,6 +1520,7 @@ function startGame() {
   get("screen-landing").classList.remove("active");
   get("screen-main").classList.add("active");
   render();
+  return true;
 }
 
 function setLang(l) {
@@ -1537,13 +1571,14 @@ function buildHTML() {
             ${[5,6,7,8,9,10,11].map(g => `<option value="${g}">${t.gradeLabel(g)}</option>`).join("")}
           </select>
           <div class="error-msg" id="name-error">${t.nameError}</div>
-          <button id="btn-start" class="btn-primary" onclick="startGame()">${t.startJourney}</button>
+          <button id="btn-start" class="btn-primary" onclick="startAndScroll()">${t.startJourney}</button>
         </div>
       </div>
     </div>
 
     <!-- MAIN -->
     <div id="screen-main" class="screen">
+      <div id="main-app">
 
       <!-- TOPBAR -->
       <div class="topbar">
@@ -1664,7 +1699,8 @@ function buildHTML() {
         <div id="tab-bank" class="tab-panel"></div>
 
       </div><!-- /content -->
-    </div><!-- /screen-main -->
+        </div><!-- /main-app -->
+      </div><!-- /screen-main -->
 
     <!-- CASE OVERLAY -->
     <div id="overlay" class="overlay">
@@ -1711,7 +1747,7 @@ function buildHTML() {
 // ─── BIND EVENTS ──────────────────────────────────────────────────────────────
 function bindEvents() {
   document.addEventListener("keydown", (e) => {
-    if (e.key === "Enter" && screen === "landing") startGame();
+    if (e.key === "Enter" && screen === "landing") startAndScroll();
   });
 
   document.addEventListener("click", (e) => {
