@@ -7,7 +7,7 @@ const T = {
     selectClass: "Выбери класс",
     startJourney: "Начать путь",
     namePlaceholder: "Твоё имя...",
-    nav: { tasks: "Задачи", leaderboard: "Рейтинг", profile: "Профиль", shop: "Магазин", reviews: "Отзывы" },
+    nav: { tasks: "Задачи", leaderboard: "Рейтинг", profile: "Профиль", shop: "Магазин", reviews: "Отзывы", bank: "Банк" },
     hint: "Подсказка",
     hintCost: "Подсказка — −5 монет",
     correct: "Верно! +",
@@ -27,10 +27,66 @@ const T = {
     questHint: "Не хватает монет на подсказку", nameError: "Введи имя и выбери класс",
     gradeLabel: (g) => `${g} класс`, level: "Уровень",
     shopDesc: "Открывай кейсы за TV монеты. Зарабатывай монеты, решая задачи.",
-    mapTitle: "Карта тем", mapDesc: "Проходи острова по порядку, чтобы открывать новые темы",
+    mapTitle: "Карта квеста", mapDesc: "Проходи острова по порядку, чтобы открывать новые темы",
     locked: "Заблокировано", available: "Доступно", completed: "Пройдено",
     backToMap: "Вернуться к карте",
     bonusCoins: "бонус монет",
+    nextTask: "Следующая задача →",
+    allDone: "Все задачи выполнены! 🏆",
+    // Quest / Detective
+    detectiveQuest: "🕵️ Детектив-квест",
+    questMapTitle: "Карта квестов",
+    mainQuest: "Главный квест",
+    goldenKey: "🗝️ Золотой Ключ",
+    goldenKeyDesc: "Выполни 3 миссии, чтобы получить Золотой Ключ и огромный бонус!",
+    mission: "Миссия",
+    missionComplete: "Миссия выполнена!",
+    goldenKeyUnlocked: "ЗОЛОТОЙ КЛЮЧ ПОЛУЧЕН!",
+    goldenKeyBonus: "+500 монет + легендарный скин",
+    easterEgg: "🥚 Пасхалка найдена!",
+    easterEggBonus: "+50 монет бонус!",
+    hiddenCode: "Введи секретный шифр",
+    hiddenCodePlaceholder: "Шифр...",
+    checkCode: "Проверить",
+    codeCorrect: "✅ Шифр верный! Бонус получен!",
+    codeWrong: "❌ Неверный шифр",
+    timeChallenge: "⏱️ Тайм-Челлендж",
+    timeChallengeDesc: "Квест открыт 24 часа! Найди Ключ первым.",
+    timeChallengeActive: "АКТИВЕН",
+    timeLeft: "Осталось",
+    // Titles / RPG
+    titleNovice: "Новичок-Сберегатель",
+    titleAssistant: "Трейдер-Ассистент",
+    titleWolf: "Волк Степной-Стрит",
+    titleMagnate: "Финансовый Магнат",
+    titleLegend: "Легенда Биржи",
+    title: "Титул",
+    // Bank
+    bankTitle: "Банк & Депозиты",
+    bankDesc: "Положи монеты на депозит под 10% годовых. Узнай, как работают сложные проценты!",
+    deposit: "Депозит",
+    depositBtn: "Открыть депозит",
+    withdrawBtn: "Снять деньги",
+    depositAmount: "Сумма депозита",
+    currentDeposit: "Текущий депозит",
+    interest: "Начисленные %",
+    totalDeposit: "Итого",
+    depositOpen: "Депозит открыт",
+    depositClosed: "Депозит закрыт",
+    depositRate: "Ставка: 10% годовых",
+    depositWithdrawn: "Снято с депозита",
+    noDeposit: "Нет активного депозита",
+    depositMin: "Минимум 10 монет",
+    notEnoughForDeposit: "Недостаточно монет",
+    // Inventory
+    inventory: "Инвентарь",
+    inventoryDesc: "Предметы из кейсов сохраняются здесь",
+    emptyInventory: "Инвентарь пуст. Открой кейс!",
+    // Team
+    teamChallenge: "👥 Командный Челлендж",
+    teamGoal: "Цель: 5000 монет за неделю",
+    teamProgress: "Прогресс команды",
+    teamBonus: "Сундук открыт! +200 монет каждому",
   },
   kz: {
     appName: "TEENVESTOR",
@@ -39,7 +95,7 @@ const T = {
     selectClass: "Сыныпты таңда",
     startJourney: "Жолды бастау",
     namePlaceholder: "Атың...",
-    nav: { tasks: "Тапсырмалар", leaderboard: "Рейтинг", profile: "Профиль", shop: "Дүкен", reviews: "Пікірлер" },
+    nav: { tasks: "Тапсырмалар", leaderboard: "Рейтинг", profile: "Профиль", shop: "Дүкен", reviews: "Пікірлер", bank: "Банк" },
     hint: "Кеңес",
     hintCost: "Кеңес — −5 монета",
     correct: "Дұрыс! +",
@@ -59,10 +115,61 @@ const T = {
     questHint: "Кеңес алуға монета жетіспейді", nameError: "Атыңды жазып, сыныпты таңда",
     gradeLabel: (g) => `${g} сынып`, level: "Деңгей",
     shopDesc: "TV монеталарға кейстерді аш. Тапсырмаларды шешіп монета жина.",
-    mapTitle: "Тақырып картасы", mapDesc: "Жаңа тақырыптарды ашу үшін аралдарды ретімен өт",
+    mapTitle: "Квест картасы", mapDesc: "Жаңа тақырыптарды ашу үшін аралдарды ретімен өт",
     locked: "Бұғатталған", available: "Қолжетімді", completed: "Аяқталды",
     backToMap: "Картаға оралу",
     bonusCoins: "бонус монета",
+    nextTask: "Келесі тапсырма →",
+    allDone: "Барлық тапсырма орындалды! 🏆",
+    detectiveQuest: "🕵️ Детектив-квест",
+    questMapTitle: "Квест картасы",
+    mainQuest: "Басты квест",
+    goldenKey: "🗝️ Алтын Кілт",
+    goldenKeyDesc: "Алтын Кілт алу үшін 3 миссияны орында!",
+    mission: "Миссия",
+    missionComplete: "Миссия орындалды!",
+    goldenKeyUnlocked: "АЛТЫН КІЛТ АЛЫНДЫ!",
+    goldenKeyBonus: "+500 монета + аңыздық скин",
+    easterEgg: "🥚 Жасырын тапқансыз!",
+    easterEggBonus: "+50 монета бонус!",
+    hiddenCode: "Жасырын шифрді енгізіңіз",
+    hiddenCodePlaceholder: "Шифр...",
+    checkCode: "Тексеру",
+    codeCorrect: "✅ Шифр дұрыс! Бонус алынды!",
+    codeWrong: "❌ Қате шифр",
+    timeChallenge: "⏱️ Уақыт Челлендж",
+    timeChallengeDesc: "Квест 24 сағат ашық! Кілтті бірінші тап.",
+    timeChallengeActive: "БЕЛСЕНДІ",
+    timeLeft: "Қалды",
+    titleNovice: "Жаңадан Келген",
+    titleAssistant: "Трейдер-Көмекші",
+    titleWolf: "Дала Бөрісі",
+    titleMagnate: "Қаржы Магнаты",
+    titleLegend: "Биржа Аңызы",
+    title: "Атақ",
+    bankTitle: "Банк & Депозиттер",
+    bankDesc: "Жылына 10% депозитке монета сал. Күрделі пайыздар қалай жұмыс істейтінін біл!",
+    deposit: "Депозит",
+    depositBtn: "Депозит ашу",
+    withdrawBtn: "Ақша алу",
+    depositAmount: "Депозит сомасы",
+    currentDeposit: "Ағымдағы депозит",
+    interest: "Есептелген %",
+    totalDeposit: "Барлығы",
+    depositOpen: "Депозит ашылды",
+    depositClosed: "Депозит жабылды",
+    depositRate: "Ставка: жылына 10%",
+    depositWithdrawn: "Депозиттен алынды",
+    noDeposit: "Белсенді депозит жоқ",
+    depositMin: "Ең аз 10 монета",
+    notEnoughForDeposit: "Монета жетіспейді",
+    inventory: "Инвентарь",
+    inventoryDesc: "Кейстерден алынған заттар",
+    emptyInventory: "Инвентарь бос. Кейс ашыңыз!",
+    teamChallenge: "👥 Команда Челлендж",
+    teamGoal: "Мақсат: Аптада 5000 монета",
+    teamProgress: "Команда прогресі",
+    teamBonus: "Сандық ашылды! +200 монета әркімге",
   },
   en: {
     appName: "TEENVESTOR",
@@ -71,7 +178,7 @@ const T = {
     selectClass: "Select your grade",
     startJourney: "Begin Journey",
     namePlaceholder: "Your name...",
-    nav: { tasks: "Tasks", leaderboard: "Leaderboard", profile: "Profile", shop: "Shop", reviews: "Reviews" },
+    nav: { tasks: "Tasks", leaderboard: "Leaderboard", profile: "Profile", shop: "Shop", reviews: "Reviews", bank: "Bank" },
     hint: "Hint",
     hintCost: "Hint — -5 coins",
     correct: "Correct! +",
@@ -91,10 +198,61 @@ const T = {
     questHint: "Not enough coins for a hint", nameError: "Enter name and select grade",
     gradeLabel: (g) => `Grade ${g}`, level: "Level",
     shopDesc: "Open cases with TV Coins earned by solving tasks.",
-    mapTitle: "Topic Map", mapDesc: "Complete islands in order to unlock new topics",
+    mapTitle: "Quest Map", mapDesc: "Complete islands in order to unlock new topics",
     locked: "Locked", available: "Available", completed: "Completed",
     backToMap: "Back to Map",
     bonusCoins: "bonus coins",
+    nextTask: "Next Task →",
+    allDone: "All tasks done! 🏆",
+    detectiveQuest: "🕵️ Detective Quest",
+    questMapTitle: "Quest Map",
+    mainQuest: "Main Quest",
+    goldenKey: "🗝️ Golden Key",
+    goldenKeyDesc: "Complete 3 missions to earn the Golden Key and a huge bonus!",
+    mission: "Mission",
+    missionComplete: "Mission Complete!",
+    goldenKeyUnlocked: "GOLDEN KEY UNLOCKED!",
+    goldenKeyBonus: "+500 coins + legendary skin",
+    easterEgg: "🥚 Easter Egg Found!",
+    easterEggBonus: "+50 coins bonus!",
+    hiddenCode: "Enter the secret cipher",
+    hiddenCodePlaceholder: "Cipher...",
+    checkCode: "Check",
+    codeCorrect: "✅ Correct! Bonus received!",
+    codeWrong: "❌ Wrong cipher",
+    timeChallenge: "⏱️ Time Challenge",
+    timeChallengeDesc: "Quest is open for 24 hours! Find the Key first.",
+    timeChallengeActive: "ACTIVE",
+    timeLeft: "Left",
+    titleNovice: "Saver Novice",
+    titleAssistant: "Trader Assistant",
+    titleWolf: "Wolf of Steppe Street",
+    titleMagnate: "Finance Magnate",
+    titleLegend: "Exchange Legend",
+    title: "Title",
+    bankTitle: "Bank & Deposits",
+    bankDesc: "Deposit coins at 10% annual interest. See how compound interest works!",
+    deposit: "Deposit",
+    depositBtn: "Open Deposit",
+    withdrawBtn: "Withdraw",
+    depositAmount: "Deposit Amount",
+    currentDeposit: "Current Deposit",
+    interest: "Interest Earned",
+    totalDeposit: "Total",
+    depositOpen: "Deposit opened",
+    depositClosed: "Deposit closed",
+    depositRate: "Rate: 10% annually",
+    depositWithdrawn: "Withdrawn from deposit",
+    noDeposit: "No active deposit",
+    depositMin: "Minimum 10 coins",
+    notEnoughForDeposit: "Not enough coins",
+    inventory: "Inventory",
+    inventoryDesc: "Items from cases are stored here",
+    emptyInventory: "Inventory empty. Open a case!",
+    teamChallenge: "👥 Team Challenge",
+    teamGoal: "Goal: 5000 coins in a week",
+    teamProgress: "Team Progress",
+    teamBonus: "Chest unlocked! +200 coins each",
   },
 };
 
@@ -123,6 +281,20 @@ const PROMO_CODES = {
   "WELCOME":   { coins: 75,  xp: 25 },
 };
 
+// Easter egg hidden codes (scattered throughout app — find them in reviews, cases descriptions, etc.)
+const EASTER_CODES = {
+  "WOLF777":  { coins: 50, xp: 30 },
+  "HIDDEN42": { coins: 50, xp: 20 },
+  "STEPPE":   { coins: 50, xp: 25 },
+};
+
+// ─── QUEST MISSIONS ──────────────────────────────────────────────────────────
+const MISSIONS = [
+  { id: 1, icon: "🔢", title: { ru: "Мастер Чисел", kz: "Сан Шебері", en: "Number Master" }, desc: { ru: "Реши 3 задачи за одну сессию", kz: "Бір сессияда 3 тапсырма шеш", en: "Solve 3 tasks in one session" }, requirement: "solve3", reward: 80 },
+  { id: 2, icon: "💡", title: { ru: "Без Подсказок", kz: "Кеңессіз", en: "No Hints" }, desc: { ru: "Реши задачу без использования подсказки", kz: "Кеңессіз тапсырма шеш", en: "Solve a task without using a hint" }, requirement: "noHint", reward: 60 },
+  { id: 3, icon: "🔥", title: { ru: "Серия x5", kz: "x5 Серия", en: "Streak x5" }, desc: { ru: "Набери серию из 5 правильных ответов", kz: "5 дұрыс жауап серияны жина", en: "Get a streak of 5 correct answers" }, requirement: "streak5", reward: 120 },
+];
+
 // ─── RARITY ──────────────────────────────────────────────────────────────────
 const RARITY_COLOR = {
   common: "#8b9cb5", uncommon: "#3ddc84", rare: "#4c9eff",
@@ -134,6 +306,7 @@ const CASES = [
   {
     id: "bronze", name: { ru: "Бронзовый кейс", kz: "Қола кейс", en: "Bronze Case" },
     cost: 50, color: "#cd7f32", tier: "BRONZE",
+    // 🥚 ПАСХАЛКА: Код WOLF777 спрятан в этом кейсе. Внимательный читатель найдёт его!
     rewards: [
       { name:{ru:"50 XP Буст",kz:"50 XP Буст",en:"50 XP Boost"}, chance:40, type:"xp", value:50, rarity:"common", desc:{ru:"+50 XP к твоему счёту",kz:"+50 XP есебіңе",en:"+50 XP to your account"} },
       { name:{ru:"30 TV Монет",kz:"30 TV Монета",en:"30 TV Coins"}, chance:30, type:"coins", value:30, rarity:"uncommon", desc:{ru:"+30 монет на кошелёк",kz:"+30 монета әмияныңа",en:"+30 coins to wallet"} },
@@ -186,6 +359,15 @@ const MOCK_PLAYERS = [
   { name: "Berik A.", grade: 9, xp: 760, coins: 180, rewards: 2, solved: 26 },
 ];
 
+// ─── RPG TITLES ──────────────────────────────────────────────────────────────
+function getTitle(xpVal) {
+  if (xpVal >= 2000) return { key: "titleLegend", color: "#f43f5e", icon: "👑" };
+  if (xpVal >= 1000) return { key: "titleMagnate", color: "#f5a623", icon: "💰" };
+  if (xpVal >= 500)  return { key: "titleWolf",    color: "#b06de3", icon: "🐺" };
+  if (xpVal >= 200)  return { key: "titleAssistant",color: "#4c9eff", icon: "📊" };
+  return { key: "titleNovice", color: "#8b9cb5", icon: "🌱" };
+}
+
 // ─── STATE ────────────────────────────────────────────────────────────────────
 let lang = "ru";
 let t = T[lang];
@@ -208,14 +390,35 @@ let promoStatusTimer = null;
 let lbFilter = "xp";
 let reviewStars = 5;
 let reviews = [
-  { name: "Arman", text: "Отличная платформа! Решаю каждый день.", stars: 5, grade: 9 },
-  { name: "Aisha", text: "Кейсы — огонь! Хочу больше наград.", stars: 5, grade: 10 },
-  { name: "Berik", text: "Система кейсов мотивирует решать больше задач!", stars: 5, grade: 9 },
+  { name: "Arman", text: "Отличная платформа! Решаю каждый день. Кстати, нашёл шифр STEPPE в одном из кейсов!", stars: 5, grade: 9 },
+  { name: "Aisha", text: "Кейсы — огонь! Хочу больше наград. P.S. ищите пасхалки в описаниях кейсов 🥚", stars: 5, grade: 10 },
+  { name: "Berik", text: "Система кейсов мотивирует решать больше задач! Код HIDDEN42 — секрет для своих 😉", stars: 5, grade: 9 },
 ];
 let activeCaseObj = null;
 let selectedIslandId = null;
 let questPopupTimer = null;
 let audioCtx = null;
+
+// Quest / Mission state
+let completedMissions = {};
+let sessionSolvedCount = 0;
+let sessionNoHintSolved = false;
+let goldenKeyEarned = false;
+let timeChallengeStart = Date.now();
+let usedEasterCodes = [];
+let easterStatus = null;
+let easterStatusTimer = null;
+
+// Bank state
+let depositAmount = 0;
+let depositOpenTime = null;
+let depositInputVal = "";
+let bankMsg = null;
+let bankMsgTimer = null;
+
+// Team challenge
+let teamCoins = 1247;
+const TEAM_GOAL = 5000;
 
 // ─── HELPERS ─────────────────────────────────────────────────────────────────
 function get(id) { return document.getElementById(id); }
@@ -261,6 +464,12 @@ function playTick() {
   } catch(e) {}
 }
 
+function formatTime(ms) {
+  const h = Math.floor(ms / 3600000);
+  const m = Math.floor((ms % 3600000) / 60000);
+  return `${h}ч ${m}м`;
+}
+
 // ─── RENDER ───────────────────────────────────────────────────────────────────
 function render() {
   renderTopBar();
@@ -271,6 +480,7 @@ function render() {
 
 function renderTopBar() {
   const lvl = getLevel(xp);
+  const titleObj = getTitle(xp);
   get("topbar-logo").textContent = t.appName;
   get("stat-coins").textContent = `TV ${coins}`;
   get("stat-coins").style.color = "#f5c842";
@@ -278,7 +488,7 @@ function renderTopBar() {
   get("stat-xp").style.color = "#a5b4fc";
   get("stat-streak").textContent = `${streak} ${t.streak}`;
   get("stat-streak").style.color = streak >= 3 ? "#f59e0b" : "rgba(255,255,255,0.35)";
-  get("stat-level").textContent = `${t.level} ${lvl}`;
+  get("stat-level").textContent = `${titleObj.icon} ${t.level} ${lvl}`;
   get("stat-level").style.color = "#3ddc84";
   qsa(".lang-btn-topbar").forEach(btn => {
     btn.classList.toggle("active", btn.dataset.lang === lang);
@@ -308,6 +518,7 @@ function renderTabs() {
   else if (tab === "leaderboard") renderLeaderboard();
   else if (tab === "profile") renderProfile();
   else if (tab === "reviews") renderReviews();
+  else if (tab === "bank") renderBank();
 }
 
 // ─── TASKS / ISLAND MAP ───────────────────────────────────────────────────────
@@ -332,9 +543,114 @@ function renderTasks() {
         <div class="quest-banner-desc">${streak < 3 ? t.questDesc : t.questDesc5}</div>
       </div>
     </div>
+    ${buildDetectiveQuestPanel()}
     ${buildIslandMap()}
   `;
   bindIslandMapEvents();
+  bindQuestPanelEvents();
+}
+
+function buildDetectiveQuestPanel() {
+  const allDone = MISSIONS.every(m => completedMissions[m.id]);
+  const timeLeft = Math.max(0, 86400000 - (Date.now() - timeChallengeStart));
+  const mCount = MISSIONS.filter(m => completedMissions[m.id]).length;
+
+  return `
+    <div class="detective-panel">
+      <div class="detective-header">
+        <div class="detective-title">${t.detectiveQuest}</div>
+        <div class="time-chip ${timeLeft > 0 ? 'active' : ''}">
+          ⏱ ${timeLeft > 0 ? formatTime(timeLeft) : "—"}
+        </div>
+      </div>
+
+      <!-- Golden Key progress -->
+      <div class="golden-key-card ${goldenKeyEarned ? 'earned' : ''}">
+        <div class="gk-icon">${goldenKeyEarned ? "🗝️" : "🔒"}</div>
+        <div class="gk-body">
+          <div class="gk-title">${t.goldenKey}</div>
+          <div class="gk-desc">${goldenKeyEarned ? t.goldenKeyBonus : t.goldenKeyDesc}</div>
+          <div class="gk-progress-bar">
+            <div class="gk-progress-fill" style="width:${(mCount/MISSIONS.length)*100}%"></div>
+          </div>
+          <div class="gk-progress-label">${mCount}/${MISSIONS.length} ${t.mission}</div>
+        </div>
+      </div>
+
+      <!-- Missions -->
+      <div class="missions-grid">
+        ${MISSIONS.map(m => {
+          const done = completedMissions[m.id];
+          return `
+            <div class="mission-card ${done ? 'done' : ''}">
+              <div class="mission-icon">${done ? "✅" : m.icon}</div>
+              <div class="mission-body">
+                <div class="mission-title">${m.title[lang]}</div>
+                <div class="mission-desc">${m.desc[lang]}</div>
+                <div class="mission-reward">+${m.reward} TV</div>
+              </div>
+            </div>
+          `;
+        }).join("")}
+      </div>
+
+      <!-- Easter egg -->
+      <div class="easter-section">
+        <div class="easter-label">🥚 ${t.hiddenCode}</div>
+        <div class="easter-row">
+          <input id="easter-input" class="easter-input" placeholder="${t.hiddenCodePlaceholder}" autocomplete="off" />
+          <button id="easter-btn" class="easter-btn">${t.checkCode}</button>
+        </div>
+        <div class="easter-msg" id="easter-msg"></div>
+      </div>
+
+      <!-- Team challenge -->
+      <div class="team-card">
+        <div class="team-title">${t.teamChallenge}</div>
+        <div class="team-goal">${t.teamGoal}</div>
+        <div class="team-bar-wrap">
+          <div class="team-bar-fill" style="width:${Math.min((teamCoins/TEAM_GOAL)*100,100)}%"></div>
+        </div>
+        <div class="team-stats">
+          <span class="team-coins">${teamCoins.toLocaleString()} / ${TEAM_GOAL.toLocaleString()} TV</span>
+          ${teamCoins >= TEAM_GOAL ? `<span class="team-bonus">🎁 ${t.teamBonus}</span>` : ""}
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function bindQuestPanelEvents() {
+  const eBtn = get("easter-btn");
+  const eInput = get("easter-input");
+  if (eBtn) eBtn.addEventListener("click", checkEasterCode);
+  if (eInput) eInput.addEventListener("keydown", e => { if (e.key === "Enter") checkEasterCode(); });
+}
+
+function checkEasterCode() {
+  const code = get("easter-input").value.trim().toUpperCase();
+  const msgEl = get("easter-msg");
+  if (easterStatusTimer) clearTimeout(easterStatusTimer);
+
+  if (!EASTER_CODES[code]) {
+    msgEl.textContent = t.codeWrong;
+    msgEl.className = "easter-msg error visible";
+  } else if (usedEasterCodes.includes(code)) {
+    msgEl.textContent = t.promoUsed;
+    msgEl.className = "easter-msg error visible";
+  } else {
+    const reward = EASTER_CODES[code];
+    coins += reward.coins;
+    xp += reward.xp;
+    usedEasterCodes.push(code);
+    get("easter-input").value = "";
+    msgEl.textContent = `${t.codeCorrect} +${reward.coins} TV`;
+    msgEl.className = "easter-msg success visible";
+    renderTopBar();
+    renderXpBar();
+    showQuestPopup(0, reward.coins, "🥚 " + t.easterEgg);
+  }
+  easterStatusTimer = setTimeout(() => { msgEl.className = "easter-msg"; }, 3500);
 }
 
 function buildIslandMap() {
@@ -383,12 +699,8 @@ function buildIslandMap() {
     }
 
     const connectorClass = isSolved ? "connector-line solved" : "connector-line";
-
     html += `<div class="island-row" style="margin-left:${offsetX}px">`;
-
-    if (idx > 0) {
-      html += `<div class="${connectorClass}"></div>`;
-    }
+    if (idx > 0) html += `<div class="${connectorClass}"></div>`;
 
     html += `
       <button class="island-btn ${stateClass}" data-task-id="${task.id}" ${isLocked ? "disabled" : ""}>
@@ -401,10 +713,7 @@ function buildIslandMap() {
       </button>
     `;
 
-    if (idx < TASKS.length - 1) {
-      html += `<div class="${connectorClass}"></div>`;
-    }
-
+    if (idx < TASKS.length - 1) html += `<div class="${connectorClass}"></div>`;
     html += `</div>`;
   });
 
@@ -427,6 +736,11 @@ function buildTaskDetail(task) {
   const fb = taskFeedback[task.id];
   const hintShown = !!shownHints[task.id];
   const selected = selectedAnswers[task.id];
+
+  const taskIdx = TASKS.findIndex(t2 => t2.id === task.id);
+  const nextTask = TASKS[taskIdx + 1];
+  const hasNext = nextTask && !solvedTasks[nextTask.id];
+  const allSolved = TASKS.every(tk => solvedTasks[tk.id]);
 
   const optionsHtml = task.options.map(opt => {
     const isSel = selected === opt;
@@ -461,6 +775,16 @@ function buildTaskDetail(task) {
     }
   }
 
+  // Next button shown after solving
+  let nextHtml = "";
+  if (isSolved) {
+    if (allSolved) {
+      nextHtml = `<div class="all-done-banner">🏆 ${t.allDone}</div>`;
+    } else if (hasNext) {
+      nextHtml = `<button class="next-task-btn" id="next-task-btn" data-next-id="${nextTask.id}">${t.nextTask}</button>`;
+    }
+  }
+
   return `
     <button class="back-btn" id="back-to-map">
       <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
@@ -477,6 +801,7 @@ function buildTaskDetail(task) {
       <div class="options-grid">${optionsHtml}</div>
       ${feedbackHtml}
       ${hintHtml}
+      ${nextHtml}
     </div>
   `;
 }
@@ -497,6 +822,13 @@ function bindTaskDetailEvents(task) {
 
   const hintBtn = get("hint-btn");
   if (hintBtn) hintBtn.addEventListener("click", () => useHint(task.id));
+
+  const nextBtn = get("next-task-btn");
+  if (nextBtn) nextBtn.addEventListener("click", () => {
+    const nextId = parseInt(nextBtn.dataset.nextId);
+    selectedIslandId = nextId;
+    renderTasks();
+  });
 }
 
 // ─── GAME LOGIC ───────────────────────────────────────────────────────────────
@@ -513,6 +845,13 @@ function handleAnswer(taskId, option) {
     xp += task.xp + bonus;
     solvedTasks[taskId] = true;
     taskFeedback[taskId] = "correct";
+    sessionSolvedCount++;
+    teamCoins += task.coins;
+
+    if (!shownHints[taskId]) sessionNoHintSolved = true;
+
+    // Check missions
+    checkMissions(newStreak);
 
     if (newStreak === 3 || newStreak === 5 || newStreak === 10) {
       showQuestPopup(newStreak, bonus);
@@ -532,6 +871,45 @@ function handleAnswer(taskId, option) {
   }
 }
 
+function checkMissions(currentStreak) {
+  let anyNew = false;
+
+  // Mission 1: solve 3 in session
+  if (!completedMissions[1] && sessionSolvedCount >= 3) {
+    completedMissions[1] = true;
+    coins += MISSIONS[0].reward;
+    anyNew = true;
+    setTimeout(() => showQuestPopup(0, MISSIONS[0].reward, "🔢 " + MISSIONS[0].title[lang]), 500);
+  }
+
+  // Mission 2: solve without hint
+  if (!completedMissions[2] && sessionNoHintSolved) {
+    completedMissions[2] = true;
+    coins += MISSIONS[1].reward;
+    anyNew = true;
+    setTimeout(() => showQuestPopup(0, MISSIONS[1].reward, "💡 " + MISSIONS[1].title[lang]), 800);
+  }
+
+  // Mission 3: streak 5
+  if (!completedMissions[3] && currentStreak >= 5) {
+    completedMissions[3] = true;
+    coins += MISSIONS[2].reward;
+    anyNew = true;
+    setTimeout(() => showQuestPopup(0, MISSIONS[2].reward, "🔥 " + MISSIONS[2].title[lang]), 1100);
+  }
+
+  // Golden key
+  if (!goldenKeyEarned && MISSIONS.every(m => completedMissions[m.id])) {
+    goldenKeyEarned = true;
+    coins += 500;
+    xp += 200;
+    earnedRewards.push({ name: { ru: "Золотой Ключ", kz: "Алтын Кілт", en: "Golden Key" }, rarity: "legendary", type: "badge", value: "goldenkey" });
+    setTimeout(() => showQuestPopup(0, 500, "🗝️ " + t.goldenKeyUnlocked), 1500);
+  }
+
+  if (anyNew) { renderTopBar(); renderXpBar(); }
+}
+
 function useHint(taskId) {
   if (coins < 5) return;
   coins -= 5;
@@ -540,10 +918,10 @@ function useHint(taskId) {
   renderTasks();
 }
 
-function showQuestPopup(streakVal, bonus) {
+function showQuestPopup(streakVal, bonus, customTitle) {
   const popup = get("quest-popup");
-  get("quest-popup-title").textContent = `${t.challengeBonus} x${streakVal}`;
-  get("quest-popup-sub").textContent = `+${bonus} ${t.bonusCoins}`;
+  get("quest-popup-title").textContent = customTitle || `${t.challengeBonus} x${streakVal}`;
+  get("quest-popup-sub").textContent = `+${bonus} TV`;
   popup.classList.add("active");
   if (questPopupTimer) clearTimeout(questPopupTimer);
   questPopupTimer = setTimeout(() => popup.classList.remove("active"), 2800);
@@ -556,11 +934,9 @@ function renderShop() {
   get("promo-input").placeholder = t.promoPlaceholder;
   get("btn-apply-promo").textContent = t.applyPromo;
 
-  // used promos
   const usedWrap = get("used-promos");
   usedWrap.innerHTML = usedPromos.map(c => `<div class="promo-tag">${c}</div>`).join("");
 
-  // promo message
   const msgEl = get("promo-msg");
   msgEl.className = "promo-msg";
   if (promoStatus === "success") {
@@ -574,7 +950,6 @@ function renderShop() {
     msgEl.classList.add("visible", "error");
   }
 
-  // cases
   const grid = get("cases-grid");
   grid.innerHTML = CASES.map(c => {
     const canAfford = coins >= c.cost;
@@ -585,7 +960,7 @@ function renderShop() {
         <div class="case-name">${c.name[lang]}</div>
         <div class="case-cost">TV ${c.cost}</div>
         <div class="case-rewards">
-          ${c.rewards.map((rw, i) => `
+          ${c.rewards.map(rw => `
             <div class="case-reward-row">
               <span class="case-reward-name">${rw.name[lang].length > 16 ? rw.name[lang].slice(0,14) + "…" : rw.name[lang]}</span>
               <span class="case-reward-chance" style="color:${RARITY_COLOR[rw.rarity]}">${rw.chance}%</span>
@@ -606,6 +981,25 @@ function renderShop() {
       if (cObj && coins >= cObj.cost) openCase(cObj);
     });
   });
+
+  // Inventory
+  renderInventory();
+}
+
+function renderInventory() {
+  const inv = get("inventory-list");
+  if (!inv) return;
+  if (earnedRewards.length === 0) {
+    inv.innerHTML = `<div class="empty-inv">${t.emptyInventory}</div>`;
+    return;
+  }
+  inv.innerHTML = earnedRewards.map(r => `
+    <div class="inv-item" style="border-color:${RARITY_COLOR[r.rarity]}30">
+      <div class="inv-icon" style="background:${RARITY_COLOR[r.rarity]}18; color:${RARITY_COLOR[r.rarity]}">${typeIcon(r.type)}</div>
+      <div class="inv-name" style="color:${RARITY_COLOR[r.rarity]}">${r.name[lang]}</div>
+      <div class="inv-rarity">${r.rarity}</div>
+    </div>
+  `).join("");
 }
 
 function applyPromo() {
@@ -773,6 +1167,7 @@ function renderLeaderboard() {
   tbody.innerHTML = lbData.map((p, idx) => {
     const isMe = p.name === (playerName || "Ты");
     const mc = idx === 0 ? "#f5c842" : idx === 1 ? "#b0b8c4" : idx === 2 ? "#cd7f32" : "rgba(255,255,255,0.35)";
+    const titleObj = getTitle(p.xp);
     return `
       <tr class="${isMe ? "me" : ""}">
         <td style="color:${mc}">${idx + 1}</td>
@@ -807,13 +1202,27 @@ function renderProfile() {
   const pct = xp % 100;
   const solvedCnt = getSolvedCount();
   const unfinished = [...new Set(TASKS.filter(tk => !solvedTasks[tk.id]).map(tk => tk.topic))];
+  const titleObj = getTitle(xp);
 
   get("profile-avatar").textContent = (playerName || "?")[0].toUpperCase();
+  get("profile-avatar").style.background = `linear-gradient(135deg, ${titleObj.color}, ${titleObj.color}88)`;
   get("profile-name").textContent = playerName;
-  get("profile-sub").textContent = `${t.class} ${playerGrade}  ·  ${t.level} ${lvl}`;
+
+  const titleText = t[titleObj.key] || titleObj.key;
+  get("profile-sub").innerHTML = `${titleObj.icon} <span style="color:${titleObj.color}">${titleText}</span> &nbsp;·&nbsp; ${t.class} ${playerGrade} &nbsp;·&nbsp; ${t.level} ${lvl}`;
+
   get("xp-progress-fill").style.width = pct + "%";
   get("xp-label-left").textContent = "XP Progress";
   get("xp-label-right").textContent = `${pct}/100 to ${t.level} ${lvl + 1}`;
+
+  // Title progression
+  const titles = [
+    { key: "titleNovice", xpNeeded: 0, icon: "🌱", color: "#8b9cb5" },
+    { key: "titleAssistant", xpNeeded: 200, icon: "📊", color: "#4c9eff" },
+    { key: "titleWolf", xpNeeded: 500, icon: "🐺", color: "#b06de3" },
+    { key: "titleMagnate", xpNeeded: 1000, icon: "💰", color: "#f5a623" },
+    { key: "titleLegend", xpNeeded: 2000, icon: "👑", color: "#f43f5e" },
+  ];
 
   const statsData = [
     [solvedCnt, t.totalSolved, "#3ddc84"],
@@ -829,6 +1238,25 @@ function renderProfile() {
       <div class="stat-lbl">${lbl}</div>
     </div>
   `).join("");
+
+  // Title progression display
+  const titlesEl = get("profile-titles");
+  if (titlesEl) {
+    titlesEl.innerHTML = `
+      <div class="subsection-label">${t.title} — RPG</div>
+      <div class="titles-row">
+        ${titles.map(ti => {
+          const isActive = ti.key === titleObj.key;
+          const isUnlocked = xp >= ti.xpNeeded;
+          return `<div class="title-chip ${isActive ? 'active' : ''} ${isUnlocked ? 'unlocked' : 'locked-title'}" style="${isActive ? `border-color:${ti.color}; color:${ti.color}` : ''}">
+            <span>${ti.icon}</span>
+            <span>${t[ti.key]}</span>
+            ${!isUnlocked ? `<span class="title-xp">${ti.xpNeeded} XP</span>` : ''}
+          </div>`;
+        }).join("")}
+      </div>
+    `;
+  }
 
   const rewardsCard = get("rewards-card");
   if (earnedRewards.length > 0) {
@@ -849,6 +1277,147 @@ function renderProfile() {
   } else {
     unfinishedCard.classList.remove("visible");
   }
+}
+
+// ─── BANK ─────────────────────────────────────────────────────────────────────
+function renderBank() {
+  const panel = get("tab-bank");
+  if (!panel) return;
+
+  const interestRate = 0.10 / (365 * 24 * 3600 * 1000); // per ms
+  let interestEarned = 0;
+  if (depositOpenTime !== null && depositAmount > 0) {
+    const elapsed = Date.now() - depositOpenTime;
+    interestEarned = Math.floor(depositAmount * interestRate * elapsed);
+  }
+  const totalWithInterest = depositAmount + interestEarned;
+
+  const bankMsgHtml = bankMsg
+    ? `<div class="bank-msg ${bankMsg.type}">${bankMsg.text}</div>`
+    : `<div class="bank-msg"></div>`;
+
+  panel.innerHTML = `
+    <div class="section-label">${t.bankTitle}</div>
+    <div class="bank-desc">${t.bankDesc}</div>
+
+    <div class="bank-card">
+      <div class="bank-rate-badge">📈 ${t.depositRate}</div>
+
+      ${depositOpenTime !== null ? `
+        <div class="deposit-active">
+          <div class="deposit-stat-row">
+            <div class="deposit-stat">
+              <div class="deposit-stat-val">${depositAmount} TV</div>
+              <div class="deposit-stat-lbl">${t.currentDeposit}</div>
+            </div>
+            <div class="deposit-stat">
+              <div class="deposit-stat-val" style="color:var(--green)">+${interestEarned} TV</div>
+              <div class="deposit-stat-lbl">${t.interest}</div>
+            </div>
+            <div class="deposit-stat">
+              <div class="deposit-stat-val" style="color:var(--gold)">${totalWithInterest} TV</div>
+              <div class="deposit-stat-lbl">${t.totalDeposit}</div>
+            </div>
+          </div>
+          <div class="interest-visual">
+            <div class="interest-bar" style="width:${Math.min((interestEarned/Math.max(depositAmount,1))*1000,100)}%"></div>
+          </div>
+          <div class="compound-explanation">
+            💡 Каждую секунду твои деньги растут! За год на ${depositAmount} TV ты получишь ~${Math.round(depositAmount * 0.1)} TV процентов.
+          </div>
+          <button class="bank-withdraw-btn" id="bank-withdraw-btn">${t.withdrawBtn} (${totalWithInterest} TV)</button>
+        </div>
+      ` : `
+        <div class="deposit-form">
+          <div class="bank-field-label">${t.depositAmount}</div>
+          <div class="bank-input-row">
+            <input id="deposit-input" class="bank-input" type="number" min="10" max="${coins}" placeholder="10 — ${coins}" value="${depositInputVal}" />
+            <button id="bank-deposit-btn" class="bank-deposit-btn">${t.depositBtn}</button>
+          </div>
+          <div class="bank-balance">Баланс: <span style="color:var(--gold)">${coins} TV</span></div>
+          <div class="bank-quick-btns">
+            ${[10, 25, 50, Math.max(coins, 10)].map(v => `<button class="bank-quick-btn" data-val="${Math.min(v, coins)}">${Math.min(v, coins)} TV</button>`).join("")}
+          </div>
+        </div>
+        <div class="noDeposit-label">${t.noDeposit}</div>
+      `}
+
+      ${bankMsgHtml}
+    </div>
+
+    <!-- How interest works -->
+    <div class="bank-edu-card">
+      <div class="bank-edu-title">📚 Как работают сложные проценты?</div>
+      <div class="bank-edu-text">
+        Представь: ты кладёшь <strong>100 TV</strong> под 10% годовых.<br/>
+        Через год: 110 TV. Через 2 года: 121 TV. Через 10 лет: <strong>259 TV!</strong><br/>
+        Деньги работают <em>на тебя</em> — это и есть магия сложных процентов 🚀
+      </div>
+      <div class="compound-table">
+        ${[1,2,5,10].map(yr => {
+          const val = Math.round(100 * Math.pow(1.1, yr));
+          return `<div class="ct-row"><span>${yr} ${yr === 1 ? "год" : yr < 5 ? "года" : "лет"}</span><span style="color:var(--green)">+${val - 100} TV</span><span style="color:var(--gold)">${val} TV</span></div>`;
+        }).join("")}
+      </div>
+    </div>
+  `;
+
+  // Bind events
+  const depBtn = get("bank-deposit-btn");
+  const withBtn = get("bank-withdraw-btn");
+
+  if (depBtn) depBtn.addEventListener("click", openDeposit);
+  if (withBtn) withBtn.addEventListener("click", withdrawDeposit);
+
+  qsa(".bank-quick-btn").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const v = parseInt(btn.dataset.val);
+      const inp = get("deposit-input");
+      if (inp) inp.value = v;
+      depositInputVal = v;
+    });
+  });
+
+  const depInp = get("deposit-input");
+  if (depInp) depInp.addEventListener("input", (e) => { depositInputVal = e.target.value; });
+}
+
+function openDeposit() {
+  const val = parseInt(get("deposit-input").value);
+  if (!val || val < 10) {
+    setBankMsg(t.depositMin, "error");
+    return;
+  }
+  if (val > coins) {
+    setBankMsg(t.notEnoughForDeposit, "error");
+    return;
+  }
+  coins -= val;
+  depositAmount = val;
+  depositOpenTime = Date.now();
+  depositInputVal = "";
+  setBankMsg(t.depositOpen + ` — ${val} TV`, "success");
+  renderTopBar();
+  renderBank();
+}
+
+function withdrawDeposit() {
+  const interestRate = 0.10 / (365 * 24 * 3600 * 1000);
+  const elapsed = Date.now() - depositOpenTime;
+  const interest = Math.floor(depositAmount * interestRate * elapsed);
+  const total = depositAmount + interest;
+  coins += total;
+  depositAmount = 0;
+  depositOpenTime = null;
+  setBankMsg(`${t.depositWithdrawn}: +${total} TV`, "success");
+  renderTopBar();
+  renderBank();
+}
+
+function setBankMsg(text, type) {
+  bankMsg = { text, type };
+  if (bankMsgTimer) clearTimeout(bankMsgTimer);
+  bankMsgTimer = setTimeout(() => { bankMsg = null; renderBank(); }, 4000);
 }
 
 // ─── REVIEWS ──────────────────────────────────────────────────────────────────
@@ -924,7 +1493,6 @@ function setLang(l) {
   lang = l;
   t = T[lang];
 
-  // Update landing
   get("logo-tagline").textContent = t.tagline;
   get("landing-name").placeholder = t.namePlaceholder;
   get("label-name").textContent = t.enterName;
@@ -998,7 +1566,7 @@ function buildHTML() {
 
       <!-- NAV -->
       <div class="nav-tabs">
-        ${["tasks","shop","leaderboard","profile","reviews"].map(key => `
+        ${["tasks","shop","leaderboard","profile","reviews","bank"].map(key => `
           <button class="tab-btn ${key === "tasks" ? "active" : ""}" data-tab="${key}">${t.nav[key]}</button>
         `).join("")}
       </div>
@@ -1023,6 +1591,12 @@ function buildHTML() {
             <div class="used-promos" id="used-promos"></div>
           </div>
           <div class="cases-grid" id="cases-grid"></div>
+          <!-- Inventory -->
+          <div class="inventory-card">
+            <div class="subsection-label">${t.inventory}</div>
+            <div class="inventory-desc">${t.inventoryDesc}</div>
+            <div class="inventory-list" id="inventory-list"></div>
+          </div>
         </div>
 
         <!-- LEADERBOARD -->
@@ -1061,6 +1635,7 @@ function buildHTML() {
             </div>
             <div class="stats-grid" id="stats-grid"></div>
           </div>
+          <div class="profile-titles-card" id="profile-titles"></div>
           <div class="rewards-card" id="rewards-card">
             <div class="subsection-label" id="rewards-title"></div>
             <div class="tags-wrap" id="rewards-tags"></div>
@@ -1084,6 +1659,9 @@ function buildHTML() {
           </div>
           <div id="reviews-list"></div>
         </div>
+
+        <!-- BANK -->
+        <div id="tab-bank" class="tab-panel"></div>
 
       </div><!-- /content -->
     </div><!-- /screen-main -->
@@ -1132,12 +1710,10 @@ function buildHTML() {
 
 // ─── BIND EVENTS ──────────────────────────────────────────────────────────────
 function bindEvents() {
-  // Landing: Enter key
   document.addEventListener("keydown", (e) => {
     if (e.key === "Enter" && screen === "landing") startGame();
   });
 
-  // Tab navigation
   document.addEventListener("click", (e) => {
     const tabBtn = e.target.closest(".tab-btn");
     if (tabBtn) {
@@ -1150,7 +1726,6 @@ function bindEvents() {
     }
   });
 
-  // Leaderboard filters
   document.addEventListener("click", (e) => {
     const filterBtn = e.target.closest(".lb-filter-btn");
     if (filterBtn) {
@@ -1159,7 +1734,6 @@ function bindEvents() {
     }
   });
 
-  // Promo apply
   document.addEventListener("click", (e) => {
     if (e.target.id === "btn-apply-promo") applyPromo();
   });
@@ -1167,20 +1741,17 @@ function bindEvents() {
     if (e.key === "Enter" && document.activeElement === get("promo-input")) applyPromo();
   });
 
-  // Grade select placeholder styling
   document.addEventListener("change", (e) => {
     if (e.target.id === "landing-grade") {
       e.target.classList.toggle("placeholder", !e.target.value);
     }
   });
 
-  // Stars for review
   document.addEventListener("click", (e) => {
     const sb = e.target.closest(".star-btn");
     if (sb) { reviewStars = parseInt(sb.dataset.star); renderStars(); }
   });
 
-  // Submit review
   document.addEventListener("click", (e) => {
     if (e.target.id === "btn-submit-review") submitReview();
   });
@@ -1190,7 +1761,6 @@ function bindEvents() {
 (function init() {
   buildHTML();
   bindEvents();
-  // Pre-render tasks panel
   renderTasks();
   renderReviews();
 })();
