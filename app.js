@@ -1,7 +1,7 @@
 // ─── TRANSLATIONS ────────────────────────────────────────────────────────────
 const T = {
   ru: {
-    appName: "TEENVESTOR",
+  appName: "",
     tagline: "Учись. Зарабатывай. Побеждай.",
     enterName: "Введи своё имя",
     selectClass: "Выбери класс",
@@ -89,7 +89,7 @@ const T = {
     teamBonus: "Сундук открыт! +200 монет каждому",
   },
   kz: {
-    appName: "TEENVESTOR",
+    appName: "",
     tagline: "Оқы. Тап. Жең.",
     enterName: "Атыңды жаз",
     selectClass: "Сыныпты таңда",
@@ -172,7 +172,7 @@ const T = {
     teamBonus: "Сандық ашылды! +200 монета әркімге",
   },
   en: {
-    appName: "TEENVESTOR",
+    appName: "",
     tagline: "Learn. Earn. Win.",
     enterName: "Enter your name",
     selectClass: "Select your grade",
@@ -312,8 +312,8 @@ const CASES = [
     rewards: [
       { name:{ru:"50 XP Буст",kz:"50 XP Буст",en:"50 XP Boost"}, chance:40, type:"xp", value:50, rarity:"common", desc:{ru:"+50 XP к твоему счёту",kz:"+50 XP есебіңе",en:"+50 XP to your account"} },
       { name:{ru:"30 TV Монет",kz:"30 TV Монета",en:"30 TV Coins"}, chance:30, type:"coins", value:30, rarity:"uncommon", desc:{ru:"+30 монет на кошелёк",kz:"+30 монета әмияныңа",en:"+30 coins to wallet"} },
-      { name:{ru:"Сертификат 5%",kz:"5% Сертификат",en:"Certificate 5%"}, chance:20, type:"cert", value:"5", rarity:"rare", desc:{ru:"Скидка 5% на курсы Teenvestor",kz:"Teenvestor курстарына 5% жеңілдік",en:"5% discount on Teenvestor courses"} },
-      { name:{ru:"Сертификат 10%",kz:"10% Сертификат",en:"Certificate 10%"}, chance:10, type:"cert", value:"10", rarity:"epic", desc:{ru:"Скидка 10% на курсы Teenvestor",kz:"Teenvestor курстарына 10% жеңілдік",en:"10% discount on Teenvestor courses"} },
+      { name:{ru:"Сертификат 5%",kz:"5% Сертификат",en:"Certificate 5%"}, chance:20, type:"cert", value:"5", rarity:"rare", desc:{ru:"Скидка 5% на курсы",kz:"Курстарға 5% жеңілдік",en:"5% discount on courses"} },
+      { name:{ru:"Сертификат 10%",kz:"10% Сертификат",en:"Certificate 10%"}, chance:10, type:"cert", value:"10", rarity:"epic", desc:{ru:"Скидка 10% на курсы",kz:"Курстарға 10% жеңілдік",en:"10% discount on courses"} },
     ],
   },
   {
@@ -1046,7 +1046,7 @@ function applyPromo() {
     // special admin promo
     if (promo.admin) {
       isAdmin = true;
-      try { localStorage.setItem('teenvestor_isAdmin', '1'); } catch (e) {}
+      try { localStorage.setItem('app_isAdmin', '1'); } catch (e) {}
       promoStatus = "success";
     } else {
       coins += promo.coins || 0;
@@ -1635,7 +1635,7 @@ function buildHTML() {
       </div>
       <div class="landing-inner">
         <div class="logo-wrap">
-          <div class="logo-text">TEENVESTOR</div>
+          <div class="logo-text">${t.appName}</div>
           <div class="logo-tagline" id="logo-tagline">${t.tagline}</div>
         </div>
         <div class="login-card">
@@ -1658,7 +1658,7 @@ function buildHTML() {
 
       <!-- TOPBAR -->
       <div class="topbar">
-        <div class="topbar-logo" id="topbar-logo">TEENVESTOR</div>
+        <div class="topbar-logo" id="topbar-logo">${t.appName}</div>
         <div class="topbar-stats">
           <div class="stat-chip" id="stat-coins">TV 80</div>
           <div class="stat-chip" id="stat-xp">0 XP</div>
@@ -1882,7 +1882,7 @@ function bindEvents() {
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 (function init() {
   try {
-    if (localStorage && localStorage.getItem && localStorage.getItem('teenvestor_isAdmin') === '1') {
+    if (localStorage && localStorage.getItem && localStorage.getItem('app_isAdmin') === '1') {
       isAdmin = true;
     }
   } catch(e) {}
