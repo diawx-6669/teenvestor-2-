@@ -451,8 +451,60 @@ async function sbLoadLeaderboard(category) {
     <div class="lb-online-category">${catLabel[category] ?? category}</div>
     ${rows}
   `;
+  return data;
 }
 window.sbLoadLeaderboard = sbLoadLeaderboard;
+
+// Возвращает данные лидерборда для внешних вызовов (app.js)
+async function sbFetchLeaderboards(category = "xp", limit = 50) {
+  const { data, error } = await _sb
+    .from("leaderboards")
+    .select("score, profiles(username,grade)")
+    .eq("category", category)
+    .order("score", { ascending: false })
+    .limit(limit);
+
+  if (error) {
+    console.error("[Supabase] sbFetchLeaderboards:", error.message);
+    return [];
+  }
+
+  return (data || []).map(row => ({
+    username: row.profiles?.username ?? "Аноним",
+    grade: row.profiles?.grade ?? "?",
+    score: row.score ?? 0,
+  }));
+}
+window.sbFetchLeaderboards = sbFetchLeaderboards;
+
+// Возвращает подробный список профилей с результатами (требует, чтобы в supabase была связь leaderboards->profiles)
+async function sbFetchFullResults(limit = 500) {
+  // Попробуем получить профили вместе с их записями в таблице leaderboards
+  const { data, error } = await _sb
+    .from('profiles')
+    .select('id, username, email, grade, leaderboards(category,score)')
+    .limit(limit);
+
+  if (error) {
+    console.error('[Supabase] sbFetchFullResults:', error.message);
+    return [];
+  }
+
+  return (data || []).map(p => {
+    const result = { id: p.id, username: p.username || '', email: p.email || '', grade: p.grade || '' };
+    // Преобразуем массив leaderboards в объект по категориям
+    (p.leaderboards || []).forEach(lb => {
+      result[lb.category] = lb.score || 0;
+    });
+    // Убедимся, что ключи есть
+    result.xp = result.xp || 0;
+    result.coins = result.coins || 0;
+    result.rewards = result.rewards || 0;
+    result.solved = result.solved || 0;
+    return result;
+  });
+}
+window.sbFetchFullResults = sbFetchFullResults;
 
 // ─── 11. АВТОПАТЧ handleAnswer ────────────────────────────────────────────────
 function sbPatchHandleAnswer() {

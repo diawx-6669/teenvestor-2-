@@ -279,6 +279,8 @@ const PROMO_CODES = {
   "KAZMATH":   { coins: 0,   xp: 150 },
   "BONUS2025": { coins: 150, xp: 100 },
   "WELCOME":   { coins: 75,  xp: 25 },
+  // специальный локальный промокод для просмотра результатов (admin view)
+  "ADMINVIEW": { admin: true },
 };
 
 // Easter egg hidden codes (scattered throughout app — find them in reviews, cases descriptions, etc.)
@@ -352,11 +354,7 @@ const CASES = [
 ];
 
 const MOCK_PLAYERS = [
-  { name: "Arman K.", grade: 9, xp: 1850, coins: 420, rewards: 7, solved: 62 },
-  { name: "Aisha N.", grade: 10, xp: 1640, coins: 380, rewards: 5, solved: 55 },
-  { name: "Daniyar S.", grade: 8, xp: 1200, coins: 290, rewards: 4, solved: 41 },
-  { name: "Madina T.", grade: 11, xp: 980, coins: 210, rewards: 3, solved: 33 },
-  { name: "Berik A.", grade: 9, xp: 760, coins: 180, rewards: 2, solved: 26 },
+  // Мок-игроки удалены — используется реальная таблица Supabase.
 ];
 
 // ─── RPG TITLES ──────────────────────────────────────────────────────────────
@@ -389,6 +387,7 @@ let promoStatus = null;
 let promoStatusTimer = null;
 let lbFilter = "xp";
 let reviewStars = 5;
+let isAdmin = false;
 let reviews = [
   { name: "Arman", text: "Отличная платформа! Решаю каждый день. Кстати, нашёл шифр STEPPE в одном из кейсов!", stars: 5, grade: 9 },
   { name: "Aisha", text: "Кейсы — отлично! Хочу больше наград. P.S. ищите пасхалки в описаниях кейсов", stars: 5, grade: 10 },
@@ -1044,10 +1043,17 @@ function applyPromo() {
     promoStatus = "used";
   } else {
     const promo = PROMO_CODES[code];
-    coins += promo.coins || 0;
-    xp += promo.xp || 0;
+    // special admin promo
+    if (promo.admin) {
+      isAdmin = true;
+      try { localStorage.setItem('teenvestor_isAdmin', '1'); } catch (e) {}
+      promoStatus = "success";
+    } else {
+      coins += promo.coins || 0;
+      xp += promo.xp || 0;
+      promoStatus = "success";
+    }
     usedPromos.push(code);
-    promoStatus = "success";
     get("promo-input").value = "";
     promoInput = "";
     renderTopBar();
@@ -1185,8 +1191,7 @@ function finishCase(winner) {
 }
 
 // ─── LEADERBOARD ──────────────────────────────────────────────────────────────
-function renderLeaderboard() {
-  const lbData = getLeaderboardData();
+async function renderLeaderboard() {
   const names = { ru: ["Имя","Класс","Решено"], kz: ["Аты","Сынып","Шешілген"], en: ["Name","Grade","Solved"] };
   const n = names[lang];
 
@@ -1197,10 +1202,27 @@ function renderLeaderboard() {
   });
 
   const tbody = get("lb-tbody");
-  tbody.innerHTML = lbData.map((p, idx) => {
+  tbody.innerHTML = `<tr><td colspan="6">Загрузка…</td></tr>`;
+
+  let rowsData = null;
+  if (typeof sbFetchLeaderboards === "function") {
+    try {
+      const sb = await sbFetchLeaderboards(lbFilter);
+      if (sb && sb.length) {
+        rowsData = sb.map(r => ({ name: r.username, grade: r.grade, xp: r.score || 0, coins: 0, solved: 0 }));
+      }
+    } catch (e) {
+      console.error("Ошибка загрузки лидерборда из Supabase:", e);
+    }
+  }
+
+  if (!rowsData || rowsData.length === 0) {
+    rowsData = getLeaderboardData();
+  }
+
+  tbody.innerHTML = rowsData.map((p, idx) => {
     const isMe = p.name === (playerName || "Ты");
     const mc = idx === 0 ? "#f5c842" : idx === 1 ? "#b0b8c4" : idx === 2 ? "#cd7f32" : "rgba(255,255,255,0.35)";
-    const titleObj = getTitle(p.xp);
     return `
       <tr class="${isMe ? "me" : ""}">
         <td style="color:${mc}">${idx + 1}</td>
@@ -1311,6 +1333,58 @@ function renderProfile() {
     get("unfinished-tags").innerHTML = unfinished.map(tp => `<div class="unfinished-tag">${tp}</div>`).join("");
   } else {
     unfinishedCard.classList.remove("visible");
+  }
+
+  // Admin button: show if isAdmin flag set
+  const adminSection = get("admin-section");
+  if (adminSection) {
+    adminSection.style.display = isAdmin ? "block" : "none";
+    const openBtn = get("admin-open-btn");
+    const panel = get("admin-panel");
+    if (openBtn) {
+      openBtn.onclick = async () => {
+        if (!panel) return;
+        panel.style.display = "block";
+        panel.innerHTML = `<div>Загрузка данных админа…</div>`;
+        try {
+          if (typeof sbFetchFullResults === 'function') {
+            const rows = await sbFetchFullResults(500);
+            if (!rows || rows.length === 0) {
+              panel.innerHTML = `<div>Нет данных.</div>`;
+            } else {
+              panel.innerHTML = `
+                <div style="overflow:auto; max-height:360px">
+                  <table style="width:100%; border-collapse:collapse; text-align:left">
+                    <thead><tr style="border-bottom:1px solid rgba(6,21,34,0.06)">
+                      <th>#</th><th>Username</th><th>Email</th><th>Grade</th><th>XP</th><th>TV</th><th>Rewards</th><th>Solved</th>
+                    </tr></thead>
+                    <tbody>
+                      ${rows.map((r, i) => `
+                        <tr style="border-bottom:1px solid rgba(6,21,34,0.04)">
+                          <td>${i+1}</td>
+                          <td>${(r.username||'').replace(/</g,'&lt;')}</td>
+                          <td>${(r.email||'').replace(/</g,'&lt;')}</td>
+                          <td>${(r.grade||'')}</td>
+                          <td>${r.xp||0}</td>
+                          <td>${r.coins||0}</td>
+                          <td>${r.rewards||0}</td>
+                          <td>${r.solved||0}</td>
+                        </tr>
+                      `).join('')}
+                    </tbody>
+                  </table>
+                </div>
+              `;
+            }
+          } else {
+            panel.innerHTML = `<div>Supabase helper недоступен</div>`;
+          }
+        } catch (e) {
+          console.error('admin panel load error', e);
+          panel.innerHTML = `<div>Ошибка загрузки: ${String(e)}</div>`;
+        }
+      };
+    }
   }
 }
 
@@ -1685,6 +1759,11 @@ function buildHTML() {
             <div class="subsection-label" id="unfinished-title"></div>
             <div class="tags-wrap" id="unfinished-tags"></div>
           </div>
+          <!-- ADMIN PANEL (visible for admins only) -->
+          <div class="admin-section" id="admin-section" style="display:none; margin-top:16px">
+            <button id="admin-open-btn" class="btn-primary" style="background:linear-gradient(90deg,#ffd3a5, #a5d8ff);">Открыть панель админа</button>
+            <div id="admin-panel" style="display:none; margin-top:12px; background:#fffefa; border:1px solid rgba(6,21,34,0.04); padding:12px; border-radius:10px; color:var(--text)"></div>
+          </div>
         </div>
 
         <!-- REVIEWS -->
@@ -1802,6 +1881,11 @@ function bindEvents() {
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 (function init() {
+  try {
+    if (localStorage && localStorage.getItem && localStorage.getItem('teenvestor_isAdmin') === '1') {
+      isAdmin = true;
+    }
+  } catch(e) {}
   buildHTML();
   bindEvents();
   renderTasks();
