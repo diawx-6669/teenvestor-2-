@@ -8,6 +8,26 @@
 </head>
 <body>
   <div id="app"></div>
+
+  <!-- 1. Supabase CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+
+  <!-- 2. Supabase-модуль (до app.js!) -->
+  <script src="supabase-module.js"></script>
+
+  <!-- 3. Основное приложение -->
   <script src="app.js"></script>
+
+  <!-- 4. Активация патча и форм после загрузки -->
+  <script>
+    // Патч handleAnswer — авто-синхронизация очков после каждого правильного ответа
+    sbPatchHandleAnswer();
+
+    // Если в твоём buildHTML() есть формы #register-form и #login-form — привяжи их:
+    // sbBindAuthForms();
+
+    // Пример: загрузить лидерборд при переходе на вкладку
+    // sbLoadLeaderboard("xp");
+  </script>
 </body>
 </html>
